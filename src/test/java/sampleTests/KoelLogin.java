@@ -19,7 +19,7 @@ public class KoelLogin {
 
     @BeforeMethod
     public void startUp(){
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
         driver = new ChromeDriver();
 //        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         webDriverWait = new WebDriverWait(driver,20);

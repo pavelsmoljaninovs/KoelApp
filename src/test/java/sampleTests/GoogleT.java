@@ -15,7 +15,7 @@ public class GoogleT {
 
     @BeforeMethod
     public void startUp(){
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromedriver");
         driver = new ChromeDriver();
         driver.get("https://google.com");
     }
@@ -29,10 +29,11 @@ public class GoogleT {
         WebElement searchField = driver.findElement(By.cssSelector("[name='q']"));
         WebElement searchButton = driver.findElement(By.cssSelector("[name='btnK']"));
 
-        searchField.sendKeys("Selenium");
+        searchField.sendKeys("Search");
+        Thread.sleep(1000);
         searchButton.click();
 
-        Assert.assertEquals(driver.getTitle(), "Selenium - Google Search");
+        Assert.assertEquals(driver.getTitle(), "Search - Google Search");
     }
 
     @Test
@@ -40,10 +41,11 @@ public class GoogleT {
         WebElement searchField = driver.findElement(By.cssSelector("[name='q']"));
         WebElement searchButton = driver.findElement(By.cssSelector("[name='btnK']"));
 
-        searchField.sendKeys("Java");
+        searchField.sendKeys("Test1");
+        Thread.sleep(1000);
         searchButton.click();
 
-        Assert.assertEquals(driver.getTitle(), "Java - Google Search");
+        Assert.assertEquals(driver.getTitle(), "Test1 - Google Search");
     }
 
     @Test
@@ -51,9 +53,10 @@ public class GoogleT {
         WebElement searchField = driver.findElement(By.cssSelector("[name='q']"));
         WebElement searchButton = driver.findElement(By.cssSelector("[name='btnK']"));
 
-        searchField.sendKeys("Maven");
+        searchField.sendKeys("Test2");
+        Thread.sleep(1000);
         searchButton.click();
 
-        Assert.assertEquals(driver.getTitle(), "Maven - Google Search");
+        Assert.assertEquals(driver.getTitle(), "Test2 - Google Search");
     }
 }
