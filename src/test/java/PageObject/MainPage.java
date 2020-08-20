@@ -5,37 +5,13 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class MainPage extends BasePage{
-    public MainPage(WebDriver driver) {
-        super(driver);
+      try {
+        getPlayerControl().isDisplayed();
+    } catch (TimeoutException xx) {
+        return false;
     }
-
-    private WebElement getPlayerControl() {
-        return fluentWait.until(x -> x.findElement(By.cssSelector("[href='#!/favorites']")));
-    }
-
-    private void clickOnPlusButton() {
-        for (int i = 0; i < 50; i++) {
-            try {
-                driver.findElement(By.cssSelector(".fa.fa-plus-circle")).click();
-                return;
-            } catch (ElementClickInterceptedException | NoSuchElementException ignored) {
-
-            }
-        }
-    }
-
-    private WebElement getNewPlaylistNameField() {
-        return this.driver.findElement(By.xpath("//*[@class = 'create']/*"));
-    }
-
-    public boolean isMain() {
-        try {
-            getPlayerControl().isDisplayed();
-        } catch (TimeoutException xx) {
-            return false;
-        }
         return true;
-    }
+}
 
     public String createNewPlaylist(String playlistName){
         clickOnPlusButton();
