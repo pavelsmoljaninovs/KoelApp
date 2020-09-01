@@ -1,6 +1,6 @@
 package KoelTest;
 
-public class AlbumTest {
+public class AlbumTest extends BaseTest{
 
     @Test
     public void album_playlistTest_loginToKoel() {
