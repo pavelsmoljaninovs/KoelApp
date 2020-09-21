@@ -1,7 +1,12 @@
 package helpers;
 
-public class Token {
+import io.restassured.response.Response;
+import models.LoginPostRequest;
+import models.TokenResponse;
 
+import static io.restassured.RestAssured.given;
+
+public class Token {
     public static String get(){
         var body = new LoginPostRequest("testpro.user04@testpro.io","te$t$tudent");
         var response =
@@ -20,6 +25,4 @@ public class Token {
         var token = jsonPath.getObject("$", TokenResponse.class);
         return token.getToken();
     }
-
-
 }

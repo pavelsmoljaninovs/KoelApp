@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Master Suit" thread-count="3" parallel="classes">
+    <listeners>
+        <listener class-name="listeners.Listeners"/>
+    </listeners>
+    <parameter name="email" value="testpro.user04@testpro.io"/>
+    <parameter name="password" value="te$t$tudent"/>
+    <parameter name="browser" value="FIREFOX"/>
+    <test name="Selenium tests">
+        <classes>
+            <class name="koelTests.RenamePlaylistTest">
+                <methods>
+                    <include name="renamePlaylist"/>
+                </methods>
+            </class>
+            <class name="koelTests.AlbumTest">
+                <methods>
+                    <include name="album_playlistTest_loginToKoel"/>
+                    <include name="album_playlistTest_createPlaylist"/>
+                    <exclude name="album_playlistTest_playlist7003exist"/>
+                    <include name="album_playlistTest_wrongLogin"/>
+                    <include name="album_playlistTest_loginToKoel1"/>
+                    <include name="album_playlistTest_createPlaylist1"/>
+                    <exclude name="album_playlistTest_playlist7003exist1"/>
+                    <include name="album_playlistTest_wrongLogin1"/>
+                    <include name="album_playlistTest_loginToKoel2"/>
+                    <include name="album_playlistTest_createPlaylist2"/>
+                    <include name="album_playlistTest_wrongLogin2"/>
+                </methods>
+            </class>
+            <class name="koelTests.PlaylistTest">
+                <methods>
+                    <include name="playlistTest_loginToKoel"/>
+                    <include name="playlistTest_createPlaylist"/>
+                    <exclude name="playlistTest_playlist7003exist"/>
+                    <include name="playlistTest_wrongLogin"/>
+                    <include name="playlistTest_loginToKoel1"/>
+                    <include name="playlistTest_createPlaylist1"/>
+                    <exclude name="playlistTest_playlist7003exist1"/>
+                    <include name="playlistTest_wrongLogin1"/>
+                    <include name="playlistTest_loginToKoel2"/>
+                    <include name="playlistTest_createPlaylist2"/>
+                    <include name="playlistTest_wrongLogin2"/>
+                </methods>
+            </class>
+            <class name="koelTests.LoginTest">
+                <methods>
+                    <include name="loginToKoel"/>
+                    <include name="createPlaylist"/>
+                    <include name="playlist7003exist"/>
+                    <include name="wrongLogin"/>
+                    <include name="loginToKoel1"/>
+                    <include name="createPlaylist1"/>
+                    <include name="playlist7003exist1"/>
+                    <include name="wrongLogin1"/>
+                    <include name="loginToKoel2"/>
+                    <include name="createPlaylist2"/>
+                    <include name="wrongLogin2"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

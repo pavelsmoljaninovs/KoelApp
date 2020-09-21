@@ -1,7 +1,6 @@
 package models;
 
-public class PlayList {
-
+public class Playlist {
     public int id;
     public String name;
     public String[] rules;
@@ -19,6 +18,4 @@ public class PlayList {
     public Playlist() {
 
     }
-
-
 }

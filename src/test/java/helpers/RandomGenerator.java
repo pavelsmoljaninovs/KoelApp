@@ -1,7 +1,11 @@
 package helpers;
 
-public class RandomGenerator {
+import models.*;
+import org.apache.commons.lang3.RandomStringUtils;
 
+import java.util.Random;
+
+public class RandomGenerator {
     public static String randomStringGenerator(int length){
         boolean useLetters = true;
         boolean useNumbers = false;
@@ -24,7 +28,4 @@ public class RandomGenerator {
         String status = "sold";
         return new PutPetRequest(ct,name,new String[]{},new Tag[]{tag},status);
     }
-
-
-
 }

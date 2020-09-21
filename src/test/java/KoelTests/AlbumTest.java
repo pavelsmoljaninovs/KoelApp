@@ -1,4 +1,9 @@
-package KoelTests;
+package koelTests;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import pageObjects.LoginPage;
+import pageObjects.MainPage;
 
 public class AlbumTest extends BaseTest{
 
@@ -84,6 +89,4 @@ public class AlbumTest extends BaseTest{
         loginPage.loginToKoel("testpro.user04@testpro.io","wrongPassword");
         Assert.assertTrue(loginPage.isWrongLogin());
     }
-
-
 }

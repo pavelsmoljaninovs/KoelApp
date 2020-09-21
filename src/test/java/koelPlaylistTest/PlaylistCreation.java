@@ -1,10 +1,17 @@
 package koelPlaylistTest;
 
-import KoelTests.BaseTest;
-import PageObject.BasePage;
+import helpers.DbAdapter;
+import helpers.RandomGenerator;
+import helpers.Token;
+import koelTests.BaseTest;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import pageObjects.LoginPage;
+
+import static io.restassured.RestAssured.given;
 
 public class PlaylistCreation extends BaseTest {
-
     private int playlistId;
     @AfterMethod
     public void tearDown(){
@@ -26,8 +33,4 @@ public class PlaylistCreation extends BaseTest {
         var playlistFromDb = DbAdapter.getPlaylistById(playlistId);
         Assert.assertEquals(playlistName,playlistFromDb.name);
     }
-
-
-
-
 }

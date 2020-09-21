@@ -1,6 +1,10 @@
-package KoelTests;
+package koelTests;
 
-public class RenamePlayListTest {
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+import pageObjects.LoginPage;
+
+public class RenamePlaylistTest extends BaseTest{
 
     @Parameters({"email","password"})
     @Test
@@ -13,8 +17,4 @@ public class RenamePlayListTest {
         mainPage.renamePlaylist(playlistId, "NewPlaylistNameXX");
 
     }
-
-
-
-
 }

@@ -1,5 +1,13 @@
 package helpers;
 
+import models.Albums;
+import models.PSongs;
+import models.Playlist;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
 public class DbAdapter {
     private static final String JDBC_DRIVER = "org.mariadb.jdbc.Driver";
     private static final String DB_URL = "jdbc:mariadb://104.237.9.33/dbkoel";

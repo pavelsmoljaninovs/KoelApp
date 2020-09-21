@@ -1,10 +1,15 @@
 package dbTest;
 
+import helpers.DbAdapter;
+import models.Albums;
+import models.PSongs;
+import models.Playlist;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class dbKoelTest {
+import java.util.List;
 
+public class dbKoelTest {
     @Test
     public void getPlaylistById(){
         Playlist pl = DbAdapter.getPlaylistById(7519);
@@ -41,5 +46,4 @@ public class dbKoelTest {
         }
         Assert.assertTrue(xx);
     }
-
 }

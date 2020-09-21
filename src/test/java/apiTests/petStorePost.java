@@ -1,7 +1,17 @@
 package apiTests;
 
-public class petStorePost {
+import helpers.RandomGenerator;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import models.PetResponse;
+import models.PostPetRequest;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
 
+import static io.restassured.RestAssured.given;
+
+public class petStorePost {
     private long petId;
     @AfterMethod
     public void tearDown(){
@@ -54,8 +64,4 @@ public class petStorePost {
         PetResponse[] pets = path.getObject("$",PetResponse[].class);
         System.out.println(pets.length);
     }
-
-
-
-
 }

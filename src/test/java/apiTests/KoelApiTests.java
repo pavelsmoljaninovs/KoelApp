@@ -1,11 +1,15 @@
 package apiTests;
 
 import helpers.Token;
+import io.restassured.response.Response;
+import models.DataResponse;
+import models.Playlist;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class KoelApiTests {
+import static io.restassured.RestAssured.given;
 
+public class KoelApiTests {
     private String token;
     @BeforeClass
     public void starOneTime(){
@@ -32,10 +36,5 @@ public class KoelApiTests {
         var playlists = jsonPath.getObject("playlists", Playlist[].class);
         System.out.println(playlists.length);
     }
-
-
-
-
-
 
 }

@@ -1,8 +1,6 @@
 package models;
 
 public class LoginPostRequest {
-
-
     private String email;
     private String password;
 
@@ -10,7 +8,4 @@ public class LoginPostRequest {
         this.email = email;
         this.password = password;
     }
-
-
-
 }

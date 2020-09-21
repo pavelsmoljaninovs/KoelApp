@@ -1,8 +1,6 @@
 package models;
 
 public class Pet {
-
-
     protected Category category;
     protected String name;
     protected String[] photoUrls;
@@ -36,9 +34,4 @@ public class Pet {
     public String getStatus() {
         return status;
     }
-
-
-
-
-
 }

@@ -1,15 +1,11 @@
 package models;
 
-public class PutPetRequest extends Pet{
-    private long id;
+public class PSongs {
+    public String title;
+    public double length;
 
-    public PutPetRequest(Category category, String name, String[] photoUrls, Tag[] tags, String status) {
-        super(category, name, photoUrls, tags, status);
-    }
-
-    public void setId(long id) {
-        this.id = id;
+    public PSongs(String title, double length) {
+        this.title = title;
+        this.length = length;
     }
 }
-
-

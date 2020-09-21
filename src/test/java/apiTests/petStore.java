@@ -1,7 +1,16 @@
 package apiTests;
 
+
+import helpers.RandomGenerator;
+import io.restassured.path.json.JsonPath;
+import io.restassured.response.Response;
+import models.*;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import static io.restassured.RestAssured.given;
 
 public class petStore {
     private Pet pet;
@@ -30,28 +39,28 @@ public class petStore {
     }
     @AfterMethod
     public void tearDown(){
-        given()
-                .baseUri("https://petstore.swagger.io/v2/")
-                .basePath("pet/"+petId)
-                .when()
-                .delete()
-                .then()
-                .statusCode(200)
-                .extract()
-                .response();
+                given()
+                        .baseUri("https://petstore.swagger.io/v2/")
+                        .basePath("pet/"+petId)
+                        .when()
+                        .delete()
+                        .then()
+                        .statusCode(200)
+                        .extract()
+                        .response();
     }
     @Test
     public void getPetById(){
         Response response =
                 given()
-                        .baseUri("https://petstore.swagger.io/v2/")
-                        .basePath("pet/"+petId)
-                        .when()
-                        .get()
-                        .then()
-                        .statusCode(200)
-                        .extract()
-                        .response();
+                    .baseUri("https://petstore.swagger.io/v2/")
+                    .basePath("pet/"+petId)
+                .when()
+                    .get()
+                .then()
+                    .statusCode(200)
+                    .extract()
+                    .response();
 
         JsonPath jsonResponse = response.jsonPath();
         PetResponse petResponse = jsonResponse.getObject("$", PetResponse.class);

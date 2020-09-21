@@ -1,7 +1,10 @@
 package listeners;
 
-public class Listeners implements ITestListener{
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
 
+public class Listeners implements ITestListener {
     @Override
     public void onTestStart(ITestResult iTestResult) {
 
@@ -37,6 +40,4 @@ public class Listeners implements ITestListener{
     public void onFinish(ITestContext iTestContext) {
 
     }
-
-
 }
