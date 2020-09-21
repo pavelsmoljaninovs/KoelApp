@@ -1,9 +1,9 @@
-package KoelTest;
+package KoelTests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LoginPageTest {
+public class LoginTest {
     public class dLoginTest extends BaseTest{
 
         @Test

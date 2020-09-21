@@ -1,4 +1,4 @@
-package KoelTest;
+package KoelTests;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;

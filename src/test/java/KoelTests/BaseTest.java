@@ -1,4 +1,4 @@
-package KoelTest;
+package KoelTests;
 
 public class BaseTest {
 

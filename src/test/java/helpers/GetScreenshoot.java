@@ -1,5 +1,7 @@
 package helpers;
 
+import org.openqa.selenium.TakesScreenshot;
+
 public class GetScreenshoot {
 
 

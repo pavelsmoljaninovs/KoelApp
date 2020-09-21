@@ -1,6 +1,6 @@
 package helpers;
 
-public class Tokens {
+public class Token {
 
     public static String get(){
         var body = new LoginPostRequest("testpro.user04@testpro.io","te$t$tudent");

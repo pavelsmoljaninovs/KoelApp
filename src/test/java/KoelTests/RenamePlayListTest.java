@@ -1,6 +1,6 @@
-package KoelTest;
+package KoelTests;
 
-public class RenamePlayList {
+public class RenamePlayListTest {
 
     @Parameters({"email","password"})
     @Test

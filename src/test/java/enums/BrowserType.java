@@ -1,7 +1,8 @@
-package Enums;
+package enums;
 
 public enum BrowserType {
     FIREFOX,
-    CHROME
+    CHROME,
+    EDGE
 
 }

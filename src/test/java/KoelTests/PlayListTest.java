@@ -1,16 +1,20 @@
-package KoelTest;
+package KoelTests;
 
-public class AlbumTest extends BaseTest{
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class PlayListTest {
+    private static Logger logger = LogManager.getLogger();
 
     @Test
-    public void album_playlistTest_loginToKoel() {
+    public void playlistTest_loginToKoel() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
         MainPage mainPage = loginPage.loginToKoel("testpro.user04@testpro.io","te$t$tudent");
         Assert.assertTrue(mainPage.isMain());
     }
     @Test
-    public void album_playlistTest_createPlaylist() {
+    public void playlistTest_createPlaylist() {
         var loginPage = new LoginPage(driver);
         loginPage.openPage();
         var mainPage = loginPage.loginToKoel("testpro.user04@testpro.io","te$t$tudent");
@@ -18,7 +22,7 @@ public class AlbumTest extends BaseTest{
         Assert.assertTrue(mainPage.isPlaylistExist(playlistId));
     }
     @Test
-    public void album_playlistTest_playlist7003exist(){
+    public void playlistTest_playlist7003exist(){
         var loginPage = new LoginPage(driver);
         loginPage.openPage();
         var mainPage = loginPage.loginToKoel("testpro.user04@testpro.io","te$t$tudent");
@@ -26,21 +30,21 @@ public class AlbumTest extends BaseTest{
         Assert.assertTrue(mainPage.isPlaylistExist("7003"));
     }
     @Test
-    public void album_playlistTest_wrongLogin(){
+    public void playlistTest_wrongLogin(){
         var loginPage = new LoginPage(driver);
         loginPage.openPage();
         loginPage.loginToKoel("testpro.user04@testpro.io","wrongPassword");
         Assert.assertTrue(loginPage.isWrongLogin());
     }
     @Test
-    public void album_playlistTest_loginToKoel1() {
+    public void playlistTest_loginToKoel1() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
         MainPage mainPage = loginPage.loginToKoel("testpro.user04@testpro.io","te$t$tudent");
         Assert.assertTrue(mainPage.isMain());
     }
     @Test
-    public void album_playlistTest_createPlaylist1() {
+    public void playlistTest_createPlaylist1() {
         var loginPage = new LoginPage(driver);
         loginPage.openPage();
         var mainPage = loginPage.loginToKoel("testpro.user04@testpro.io","te$t$tudent");
@@ -48,7 +52,7 @@ public class AlbumTest extends BaseTest{
         Assert.assertTrue(mainPage.isPlaylistExist(playlistId));
     }
     @Test
-    public void album_playlistTest_playlist7003exist1(){
+    public void playlistTest_playlist7003exist1(){
         var loginPage = new LoginPage(driver);
         loginPage.openPage();
         var mainPage = loginPage.loginToKoel("testpro.user04@testpro.io","te$t$tudent");
@@ -56,21 +60,21 @@ public class AlbumTest extends BaseTest{
         Assert.assertTrue(mainPage.isPlaylistExist("7003"));
     }
     @Test
-    public void album_playlistTest_wrongLogin1(){
+    public void playlistTest_wrongLogin1(){
         var loginPage = new LoginPage(driver);
         loginPage.openPage();
         loginPage.loginToKoel("testpro.user04@testpro.io","wrongPassword");
         Assert.assertTrue(loginPage.isWrongLogin());
     }
     @Test
-    public void album_playlistTest_loginToKoel2() {
+    public void playlistTest_loginToKoel2() {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.openPage();
         MainPage mainPage = loginPage.loginToKoel("testpro.user04@testpro.io","te$t$tudent");
         Assert.assertTrue(mainPage.isMain());
     }
     @Test
-    public void album_playlistTest_createPlaylist2() {
+    public void playlistTest_createPlaylist2() {
         var loginPage = new LoginPage(driver);
         loginPage.openPage();
         var mainPage = loginPage.loginToKoel("testpro.user04@testpro.io","te$t$tudent");
@@ -78,14 +82,10 @@ public class AlbumTest extends BaseTest{
         Assert.assertTrue(mainPage.isPlaylistExist(playlistId));
     }
     @Test
-    public void album_playlistTest_wrongLogin2(){
+    public void playlistTest_wrongLogin2(){
         var loginPage = new LoginPage(driver);
         loginPage.openPage();
         loginPage.loginToKoel("testpro.user04@testpro.io","wrongPassword");
         Assert.assertTrue(loginPage.isWrongLogin());
     }
-
-
-
-
 }
